@@ -77,7 +77,7 @@ So it stays unimplemented, and GSTIN validation is not claimed as a feature.
 The synthetic suite is not evidence about real documents, and pretending
 otherwise would be the easiest lie in this project. I rendered those receipts:
 one font, no folds, no glare, no patterned background, no creases. Real
-photographs score 79â€“90 on OCR confidence because of where they were taken.
+photographs score 79–90 on OCR confidence because of where they were taken.
 
 Conversely, 8 photographs is not a benchmark in any statistical sense. Four
 distinct bills is a smoke test with real teeth, not a sample.
