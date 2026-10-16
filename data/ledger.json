@@ -1,0 +1,175 @@
+{
+  "generatedAt": "2026-10-16T13:51:00.796Z",
+  "rows": [
+    {
+      "source": "receipt-01.png",
+      "vendor": "ANNAMAIYA PROVISION STORES",
+      "gstin": "33AABCA1234C1Z5",
+      "invoice": "2291",
+      "date": "2026-10-12",
+      "subtotal": 1331.5,
+      "tax": null,
+      "total": 1451.34,
+      "total_via": "total",
+      "currency": "INR",
+      "item_count": 5,
+      "items_sum": 1331.5,
+      "reconciliation": "ok",
+      "ocr_warnings": [
+        "total read from \"total\""
+      ],
+      "items": [
+        {
+          "name": "Rice 5kg",
+          "qty": 1,
+          "amount": 420,
+          "unit": 420
+        },
+        {
+          "name": "Sunflower Oil 1L",
+          "qty": 2,
+          "amount": 276,
+          "unit": 138
+        },
+        {
+          "name": "Sugar 1kg",
+          "qty": 1,
+          "amount": 46.5,
+          "unit": 46.5
+        },
+        {
+          "name": "Tea Powder 250g",
+          "qty": 1,
+          "amount": 285,
+          "unit": 285
+        },
+        {
+          "name": "Toor Dal kg",
+          "qty": 2,
+          "amount": 304,
+          "unit": 152
+        }
+      ]
+    },
+    {
+      "source": "receipt-02.png",
+      "vendor": "ANNAMAIYA PROVISION STORES",
+      "gstin": "33AABCA1234C1Z5",
+      "invoice": "2304",
+      "date": "2026-10-14",
+      "subtotal": 528,
+      "tax": null,
+      "total": 575.52,
+      "total_via": "total",
+      "currency": "INR",
+      "item_count": 2,
+      "items_sum": 528,
+      "reconciliation": "ok",
+      "ocr_warnings": [
+        "total read from \"total\""
+      ],
+      "items": [
+        {
+          "name": "Rice 5kg",
+          "qty": 1,
+          "amount": 440,
+          "unit": 440
+        },
+        {
+          "name": "Idi Mix Tkg",
+          "qty": 1,
+          "amount": 88,
+          "unit": 88
+        }
+      ]
+    },
+    {
+      "source": "receipt-03-duplicate.png",
+      "vendor": "ANNAMAIYA PROVISION STORES",
+      "gstin": "33AABCA1234C1Z5",
+      "invoice": "2291",
+      "date": "2026-10-12",
+      "subtotal": 1331.5,
+      "tax": null,
+      "total": 1451.34,
+      "total_via": "total",
+      "currency": "INR",
+      "item_count": 5,
+      "items_sum": 1331.5,
+      "reconciliation": "ok",
+      "ocr_warnings": [
+        "total read from \"total\""
+      ],
+      "items": [
+        {
+          "name": "Rice 5kg",
+          "qty": 1,
+          "amount": 420,
+          "unit": 420
+        },
+        {
+          "name": "Sunflower Oil 1L",
+          "qty": 2,
+          "amount": 276,
+          "unit": 138
+        },
+        {
+          "name": "Sugar 1kg",
+          "qty": 1,
+          "amount": 46.5,
+          "unit": 46.5
+        },
+        {
+          "name": "Tea Powder 250g",
+          "qty": 1,
+          "amount": 285,
+          "unit": 285
+        },
+        {
+          "name": "Toor Dal kg",
+          "qty": 2,
+          "amount": 304,
+          "unit": 152
+        }
+      ]
+    },
+    {
+      "source": "receipt-04-stationery.png",
+      "vendor": "SARASWATHI STATIONERY",
+      "gstin": "33AAECS4567D1ZK",
+      "invoice": "ST-884",
+      "date": "2026-10-15",
+      "subtotal": 596,
+      "tax": null,
+      "total": 649.64,
+      "total_via": "total",
+      "currency": "INR",
+      "item_count": 3,
+      "items_sum": 596,
+      "reconciliation": "ok",
+      "ocr_warnings": [
+        "total read from \"total\""
+      ],
+      "items": [
+        {
+          "name": "Ad Notebook",
+          "qty": 4,
+          "amount": 196,
+          "unit": 49
+        },
+        {
+          "name": "Gel Pen",
+          "qty": 10,
+          "amount": 150,
+          "unit": 15
+        },
+        {
+          "name": "Stapler",
+          "qty": 1,
+          "amount": 250,
+          "unit": 250
+        }
+      ]
+    }
+  ]
+}

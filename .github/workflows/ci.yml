@@ -1,0 +1,106 @@
+﻿name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  tests:
+    name: Tests (no OCR, no model)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      # Hermetic by design: every check reads committed fixtures, so CI needs
+      # neither the OCR worker, the 11 MB language data, nor any network call.
+      - name: Run tests
+        run: npm test
+
+      # samples/real holds real receipts and must never reach the repository.
+      - name: Fail if any real receipt photo was committed
+        run: |
+          if git ls-files --error-unmatch samples/real >/dev/null 2>&1; then
+            echo "::error::Real receipt photos are tracked. They contain identifiable business data."
+            git ls-files samples/real
+            exit 1
+          fi
+          echo "samples/real is not tracked"
+
+      # The fixtures are committed OCR text, so redaction has to hold.
+        - name: Fail if a fixture contains an identifier
+          run: |
+            node scripts/pii-lint.mjs
+            echo "fixtures are clean"
+
+  ocr:
+    name: OCR smoke test (downloads language data)
+    runs-on: ubuntu-latest
+    needs: tests
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: npm
+
+      - name: Install ffmpeg
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y ffmpeg
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Generate the synthetic receipts
+        run: npm run samples
+
+      # Proves the Tesseract WebAssembly worker loads and reads a rendered
+      # receipt on a clean Linux runner. It asserts the vendor and the total,
+      # not just that the process exited zero.
+      - name: OCR the synthetic receipts
+        run: npm run ocr -- samples --out data/raw
+
+      - name: Assert the ledger parses to the expected totals
+        run: |
+          npm run parse -- data/raw --out data/ledger.csv
+          cat data/ledger.csv
+          grep -q "ANNAMAIYA PROVISION STORES,33AABCA1234C1Z5,2291" data/ledger.csv \
+            || { echo "::error::Vendor, GSTIN or invoice did not parse"; exit 1; }
+          grep -q ",1451.34," data/ledger.csv \
+            || { echo "::error::Total did not parse"; exit 1; }
+          echo "ledger parsed as expected"
+
+      - name: Assert the duplicate is detected
+        run: |
+          npm run analyze
+          grep -q "duplicate_invoice" data/anomalies.json \
+            || { echo "::error::The seeded duplicate was not detected"; exit 1; }
+          echo "anomaly detection working"
+
+      # Upload the artefacts so a failure can be inspected without rerunning.
+      - name: Upload the parsed ledger
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ledger
+          path: |
+            data/ledger.csv
+            data/ledger.json
+            data/anomalies.json
+            data/raw/
+          if-no-files-found: warn

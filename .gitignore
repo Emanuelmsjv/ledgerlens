@@ -1,0 +1,14 @@
+﻿node_modules/
+data/raw/
+eng.traineddata
+*.log
+
+# Real receipt photos. These contain identifiable business data - shop phone
+# numbers, a GSTIN, a biller's name and employee ID. They stay local and are
+# never committed or published.
+samples/real/
+
+# Local redaction blocklist. Naming the towns, depots and branches that appear
+# on real receipts in a committed file would defeat the point of redacting
+# them, so this list lives only on the machine that produced the fixtures.
+redaction-terms.txt

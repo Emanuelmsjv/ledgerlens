@@ -1,0 +1,21 @@
+{
+  "generatedAt": "2026-10-16T15:12:41.818Z",
+  "counts": {
+    "duplicate_invoice": 1
+  },
+  "findings": [
+    {
+      "kind": "duplicate_invoice",
+      "severity": "high",
+      "rows": [
+        0,
+        2
+      ],
+      "sources": [
+        "receipt-01.png",
+        "receipt-03-duplicate.png"
+      ],
+      "message": "Invoice 2291 from ANNAMAIYA PROVISION STORES appears 2 times at an identical 1451.34. Likely a double scan or a double payment."
+    }
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "note": "Original findTotal logic versus the shipped one, measured on real receipt OCR. Ground truth read off the paper.",
+  "rows": [
+    {
+      "file": "pic_1(receipt dimension 1).txt",
+      "truth": 180,
+      "original": null,
+      "originalStatus": "abstain",
+      "shipped": 180,
+      "shippedStatus": "right"
+    },
+    {
+      "file": "pic_2(receipt dimension 1).txt",
+      "truth": 593,
+      "original": 102,
+      "originalStatus": "WRONG",
+      "shipped": 593,
+      "shippedStatus": "right"
+    },
+    {
+      "file": "pic_2(receipt dimension 3).txt",
+      "truth": 593,
+      "original": 102,
+      "originalStatus": "WRONG",
+      "shipped": 593,
+      "shippedStatus": "right"
+    },
+    {
+      "file": "pic_3(receipt dimension 1).txt",
+      "truth": 88,
+      "original": 88,
+      "originalStatus": "right",
+      "shipped": 88,
+      "shippedStatus": "right"
+    },
+    {
+      "file": "pic_4(receipt dimension 1).txt",
+      "truth": 4600,
+      "original": 459,
+      "originalStatus": "WRONG",
+      "shipped": 4600,
+      "shippedStatus": "right"
+    }
+  ],
+  "original": {
+    "right": 1,
+    "wrong": 3,
+    "abstained": 1
+  },
+  "shipped": {
+    "right": 5,
+    "wrong": 0,
+    "abstained": 0
+  }
+}

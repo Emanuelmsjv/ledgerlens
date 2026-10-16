@@ -1,0 +1,17 @@
+ANNAMAIYA PROVISION STORES
+42 Model Street Demotown
+GSTIN 33AABCA1234C1Z5
+Invoice INV-2291
+
+Date 2026-10-12
+
+Rice 5kg x1 420.00
+Sunflower Oil 1L x2 276.00
+Sugar 1kg x1 46.50
+
+Tea Powder 250g x1 285.00
+Toor Dal kg x2 304.00
+SUBTOTAL 1331.50
+CGSTOpct 59.92
+SGSTopct 59.92
+TOTAL 1451.34

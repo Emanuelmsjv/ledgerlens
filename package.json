@@ -1,0 +1,24 @@
+﻿{
+  "name": "ledgerlens",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Offline receipt OCR to accounting CSV, with anomaly detection over spend history. CPU-only, pure Node.",
+  "type": "module",
+  "license": "CC-BY-NC-SA-4.0",
+  "scripts": {
+    "samples": "node scripts/make-samples.mjs",
+    "ocr": "node scripts/ocr.mjs",
+    "parse": "node scripts/parse.mjs",
+    "analyze": "node scripts/analyze.mjs",
+    "fixtures": "node scripts/make-fixtures.mjs",
+    "pipeline": "npm run ocr -- samples --out data/raw && npm run parse -- data/raw --out data/ledger.csv && npm run analyze",
+    "benchmark": "node scripts/benchmark.mjs",
+    "test": "node scripts/test.mjs && node scripts/test-analyze.mjs && node scripts/test-fixtures.mjs"
+  },
+  "dependencies": {
+    "tesseract.js": "^7.0.0"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

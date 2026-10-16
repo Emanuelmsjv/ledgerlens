@@ -1,0 +1,42 @@
+{
+  "note": "Redacted OCR output from real receipt photos. The photos are not in this repository; they contain identifiable business data.",
+  "redacted": [
+    "GSTIN",
+    "phone numbers",
+    "long numeric identifiers"
+  ],
+  "fixtures": [
+    {
+      "file": "pic_1(receipt dimension 1).txt",
+      "lines": 16
+    },
+    {
+      "file": "pic_1(receipt dimension 2).txt",
+      "lines": 16
+    },
+    {
+      "file": "pic_2(receipt dimension 1).txt",
+      "lines": 33
+    },
+    {
+      "file": "pic_2(receipt dimension 2).txt",
+      "lines": 36
+    },
+    {
+      "file": "pic_2(receipt dimension 3).txt",
+      "lines": 64
+    },
+    {
+      "file": "pic_3(receipt dimension 1).txt",
+      "lines": 26
+    },
+    {
+      "file": "pic_3(receipt dimension 2).txt",
+      "lines": 27
+    },
+    {
+      "file": "pic_4(receipt dimension 1).txt",
+      "lines": 23
+    }
+  ]
+}

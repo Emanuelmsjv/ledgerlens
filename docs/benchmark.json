@@ -1,0 +1,170 @@
+{
+  "generatedAt": "2026-10-16T15:12:31.653Z",
+  "synthetic": [
+    {
+      "file": "syn-gst-standard.png",
+      "layout": "inline-items",
+      "status": "correct",
+      "ocr": 82
+    },
+    {
+      "file": "syn-mrp-below.png",
+      "layout": "inline-items",
+      "status": "correct",
+      "ocr": 79
+    },
+    {
+      "file": "syn-credit-balance.png",
+      "layout": "inline-items",
+      "status": "correct",
+      "ocr": 86
+    },
+    {
+      "file": "syn-ticket.png",
+      "layout": "ticket",
+      "status": "correct",
+      "ocr": 87
+    },
+    {
+      "file": "syn-wrapped.png",
+      "layout": "wrapped",
+      "status": "correct",
+      "ocr": 91
+    },
+    {
+      "file": "syn-cash-tender.png",
+      "layout": "inline-items",
+      "status": "correct",
+      "ocr": 86
+    },
+    {
+      "file": "syn-damaged-labels.png",
+      "layout": "inline-items",
+      "status": "correct",
+      "ocr": 90
+    }
+  ],
+  "real": [
+    {
+      "file": "pic_1(receipt dimension 1).txt",
+      "status": "correct",
+      "wantTotal": 180,
+      "gotTotal": 180,
+      "gotDate": "2026-10-15",
+      "wantDate": "2026-10-15",
+      "via": "rs"
+    },
+    {
+      "file": "pic_1(receipt dimension 2).txt",
+      "status": "correct",
+      "wantTotal": 180,
+      "gotTotal": 180,
+      "gotDate": "2026-10-15",
+      "wantDate": "2026-10-15",
+      "via": "rs"
+    },
+    {
+      "file": "pic_2(receipt dimension 1).txt",
+      "status": "correct",
+      "wantTotal": 593,
+      "gotTotal": 593,
+      "gotDate": "2026-10-13",
+      "wantDate": "2026-10-13",
+      "via": "net_amount"
+    },
+    {
+      "file": "pic_2(receipt dimension 2).txt",
+      "status": "correct",
+      "wantTotal": 593,
+      "gotTotal": 593,
+      "gotDate": "2026-10-13",
+      "wantDate": "2026-10-13",
+      "via": "net_amount"
+    },
+    {
+      "file": "pic_2(receipt dimension 3).txt",
+      "status": "correct",
+      "wantTotal": 593,
+      "gotTotal": 593,
+      "gotDate": "2026-10-13",
+      "wantDate": "2026-10-13",
+      "via": "net_amount"
+    },
+    {
+      "file": "pic_3(receipt dimension 1).txt",
+      "status": "correct",
+      "wantTotal": 88,
+      "gotTotal": 88,
+      "gotDate": "2026-10-11",
+      "wantDate": "2026-10-11",
+      "via": "total"
+    },
+    {
+      "file": "pic_3(receipt dimension 2).txt",
+      "status": "abstained",
+      "wantTotal": null,
+      "gotTotal": null,
+      "gotDate": "2026-10-11",
+      "wantDate": null,
+      "via": null
+    },
+    {
+      "file": "pic_4(receipt dimension 1).txt",
+      "status": "correct",
+      "wantTotal": 4600,
+      "gotTotal": 4600,
+      "gotDate": "2026-10-12",
+      "wantDate": "2026-10-12",
+      "via": "balance"
+    }
+  ],
+  "summaries": {
+    "synthetic": {
+      "label": "synthetic (ground truth fixed at case definition)",
+      "n": 7,
+      "correct": 7,
+      "abstained": 0,
+      "wrong": 0,
+      "produced": 7,
+      "wrongRateOfProduced": 0,
+      "coverage": 1,
+      "fields": {
+        "total": {
+          "ok": 7,
+          "n": 7
+        },
+        "subtotal": {
+          "ok": 7,
+          "n": 7
+        },
+        "date": {
+          "ok": 7,
+          "n": 7
+        },
+        "invoice": {
+          "ok": 6,
+          "n": 7
+        },
+        "gstin": {
+          "ok": 3,
+          "n": 4
+        },
+        "vendor": {
+          "ok": 6,
+          "n": 7
+        }
+      }
+    },
+    "real": {
+      "label": "real (ground truth read off paper)",
+      "n": 8,
+      "correct": 7,
+      "abstained": 1,
+      "wrong": 0,
+      "produced": 7,
+      "wrongRateOfProduced": 0,
+      "coverage": 0.875,
+      "fields": {}
+    }
+  }
+}
